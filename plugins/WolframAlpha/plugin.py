@@ -121,7 +121,7 @@ class WolframAlpha(callbacks.Plugin):
             "appid": apikey,
             "format": "plaintext",
             "parsetimeout": "10",
-            "scantimeout": "15",
+            "scantimeout": "10",
             "location": "Helsinki, Finland",
             "units": "metric"
         }).encode("ascii")
