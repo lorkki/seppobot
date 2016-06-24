@@ -15,19 +15,6 @@ def joke(text):
 				yield l
 joke.url = "http://www.rinkworks.com/jokes/random.cgi"
 
-def limerick(text):
-	match = re.search("<div class=.quote_output.>(.+?)</div>", text, re.I | re.S)
-	if match:
-		s = match.group(1)
-		
-		lines = s.split('<br />')
-		
-		for l in lines:
-			l = l.strip()
-			if l:
-				yield l
-limerick.url = "http://limerickdb.com/?random2"
-
 def schneier(text):
 	match = re.search("<p class=.fact.>(.+?)</p>", text, re.I | re.S)
 	if match:
