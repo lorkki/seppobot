@@ -38,7 +38,7 @@ import supybot.callbacks as callbacks
 
 from . import scrapers
 from .scrapers import scrape
-from . import randpc, genre, speare, joik
+from . import randpc, genre, speare
 
 class ADOM(callbacks.Plugin):
 	"""Add the help for "@plugin help ADOM" here
@@ -131,7 +131,7 @@ class ADOM(callbacks.Plugin):
 		
 		Tells a bad joke (from Rinkworks).
 		"""
-		irc.reply(joik.joik())
+		irc.reply(get_joik())
 	joik = wrap(joik, [optional("text")])
 
 Class = ADOM
@@ -145,4 +145,8 @@ def factor(n):
 			return [i] + factor(n // i)
 	return [n]
 
-
+def get_joik(minlength=60, maxlength=80, charset="aeiouy"):
+	out = ""
+	while len(out) < minlength:
+		out += random.choice(charset) * random.randint(1, min(10, maxlength-len(out)))
+	return out

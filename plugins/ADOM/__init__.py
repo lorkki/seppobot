@@ -58,7 +58,6 @@ reload(plugin) # In case we're being reloaded.
 reload(scrapers)
 reload(randpc)
 reload(speare)
-reload(joik)
 reload(genre)
 # Add more reloads here if you add third-party modules and want them to be
 # reloaded when this plugin is reloaded.  Don't forget to import them as well!
