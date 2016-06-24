@@ -53,14 +53,6 @@ class ADOM(callbacks.Plugin):
 		scrape(irc, scrapers.joke, plugin=self)
 	joke = wrap(joke, [optional("text")])
 	
-	def limerick(self, irc, msg, args, text=""):
-		"""takes no arguments
-		
-		Tells a limerick (from LimerickDB).
-		"""
-		scrape(irc, scrapers.limerick, plugin=self)
-	limerick = wrap(limerick, [optional("text")])
-	
 	def schneier(self, irc, msg, args, text=""):
 		"""takes no arguments
 		
@@ -68,14 +60,6 @@ class ADOM(callbacks.Plugin):
 		"""
 		scrape(irc, scrapers.schneier, plugin=self)
 	schneier = wrap(schneier, [optional("text")])
-	
-	def lorkki(self, irc, msg, args, text=""):
-		"""takes no arguments
-		
-		Tells a Lorkki fact.
-		"""
-		scrape(irc, scrapers.lorkki, plugin=self)
-	lorkki = wrap(lorkki, [optional("text")])
 
 	def spock(self, irc, msg, args, text=""):
 		"""takes no arguments
