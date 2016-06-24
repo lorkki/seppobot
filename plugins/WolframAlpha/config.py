@@ -49,9 +49,11 @@ def configure(advanced):
 
 
 WolframAlpha = conf.registerPlugin('WolframAlpha')
-# This is where your configuration variables (if any) should go.  For example:
-# conf.registerGlobalValue(WolframAlpha, 'someConfigVariableName',
-#     registry.Boolean(False, _("""Help for someConfigVariableName.""")))
 
+conf.registerGlobalValue(
+    WolframAlpha,
+    "apikey",
+    registry.String("", _("""Wolfram Alpha API key."""))
+)
 
 # vim:set shiftwidth=4 tabstop=4 expandtab textwidth=79:
