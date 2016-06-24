@@ -36,14 +36,6 @@ def schneier(text):
 		yield h.unescape(s)
 schneier.url = "http://www.schneierfacts.com/"
 
-def lorkki(text):
-	match = re.search("<p class=.fact.>(.+?)</p>", text, re.I | re.S)
-	if match:
-		h = html.parser.HTMLParser()
-		s = match.group(1).strip().replace("Bruce Schneier", "Lorkki")
-		yield h.unescape(s)
-lorkki.url = "http://www.schneierfacts.com/"
-
 def scrape(irc, op, url=None, plugin=None, prefixnick=False):
 	"""Generic screen scraper.
 	"""
