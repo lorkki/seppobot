@@ -1,43 +1,45 @@
-
 import random as r
 
-names_race = [	"Human",
-		"Troll",
-		"High Elf",
-		"Gray Elf",
-		"Dark Elf",
-		"Orc",
-		"Drakeling",
-		"Dwarf",
-		"Gnome",
-		"Hurthling"	]
+names_race = ["Human",
+              "Troll",
+              "High Elf",
+              "Gray Elf",
+              "Dark Elf",
+              "Orc",
+              "Drakeling",
+              "Dwarf",
+              "Gnome",
+              "Hurthling",
+              "Mist Elf",
+              "Ratling"]
 
-names_class = [	"Fighter",
-		"Paladin",
-		"Ranger",
-		"Thief",
-		"Assassin",
-		"Wizard",
-		"Priest",
-		"Bard",
-		"Monk",
-		"Healer",
-		"Weaponsmith",
-		"Archer",
-		"Merchant",
-		"Farmer",
-		"Mindcrafter",
-		"Barbarian",
-		"Druid",
-		"Necromancer",
-		"Elementalist",
-		"Beastfighter"	]
+names_class = ["Fighter",
+               "Paladin",
+               "Ranger",
+               "Thief",
+               "Assassin",
+               "Wizard",
+               "Priest",
+               "Bard",
+               "Monk",
+               "Healer",
+               "Weaponsmith",
+               "Archer",
+               "Merchant",
+               "Farmer",
+               "Mindcrafter",
+               "Barbarian",
+               "Druid",
+               "Necromancer",
+               "Elementalist",
+               "Beastfighter",
+               "Duelist",
+               "Chaos Knight"]
 
-names_gender = [ "Male", "Female" ]
+names_gender = ["Male", "Female"]
 
 def randpc():
-	picks = (r.choice(names_gender),
-		r.choice(names_race),
-		r.choice(names_class))
-	return "%s, %s, %s" % picks
-
+    picks = (r.choice(names_gender),
+        r.choice(names_race),
+        r.choice(names_class))
+    return "%s, %s, %s" % picks
